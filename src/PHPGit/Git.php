@@ -85,7 +85,7 @@ class Git
         chdir($cwd);
 
         if ($returnValue !== 0) {
-            throw new \RuntimeException(implode("\r\n", $output));
+            throw new \RuntimeException(implode("", $output));
         }
 
         return $output;
