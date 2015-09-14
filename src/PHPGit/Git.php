@@ -85,7 +85,7 @@ class Git
         chdir($cwd);
 
         if ($returnValue !== 0) {
-            throw new \RuntimeException(implode("", $output));
+            throw new \RuntimeException("execute command {$command} error:" . implode("\r\n", $output));
         }
 
         return $output;
